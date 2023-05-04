@@ -1,0 +1,82 @@
+Requisição http
+
+URL: https://pokeapi.co/api/v2/pokemon
+    ${IP}/${path = caminho de identificação recurso}
+
+IP: https://pokeapi.co  ----- > Dominio
+    http://127.0.0.1:8080 
+
+Path: /api/v2/pokemon
+
+Request MEthod: GET | POST | PUT | DELETE | PATCH
+
+GET - Buscar um pokemon
+POST - Inserir um pokemon
+PUT - Atualização um pokemon
+
+Path - Primeira área de transferencia de dados
+https://pokeapi.co/api/v2/pokemon/1
+
+Query String  - Como se fosse um filtro de pesquisa na API
+Estrura chave/valor
+& --- Usado para concantenar
+
+https://pokeapi.co/api/v2/pokemon?type=grass&name=i
+
+type = grass
+name = i
+
+https://pokeapi.co/api/v2/pokemon?offset=20&limit=20
+
+?
+offset=20 --- Páginação - Deslocamento de 20 em 20
+limit=20 --- Limite na página
+
+headers - dados de configuração da nossa requisição, configurações da API
+
+
+Response Headers
+    Confiugração da resposta
+    pt-BR,
+    pt;q=0.9,
+    en-US;q=0.8,
+    en;q=0.7
+    
+    q = prioridade. Quando não tem é que é prioridade máxima.
+
+    Authorization: Bearer
+
+Request headers
+
+    Configuração da Requisição
+
+    O que é eu aceito como resposta.
+    accept: 
+    text/html,
+    application/xhtml+xml,
+    application/xml;q=0.9,
+    image/avif,
+    image/webp,
+    image/apng,
+    */*;
+    q=0.8,application/signed-exchange;v=b3;q=0.7
+
+BODY  ---> Corpo da requisição e da resposta 
+
+    GET --- Não tem body na requisição, mas tem na resposta 
+
+    Request Headers 
+        content-type: application/json
+
+    POST
+    request body 
+    {
+        "name": "Teste"
+    }
+
+Status Code --- > O que aconteceu com a requisição
+
+    Response Headers
+    Request Body
+
+    status code: 200 Ok
